@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const modal = document.getElementById("modal-tarefa");
     const form = document.getElementById("form-tarefa");
-    const btnIncluir = document.getElementById("btn-incluir");
+    const btnIncluir = document.getElementById("btnAdicionar");
     const closeModal = document.getElementById("close-modal");
     const tarefasContainer = document.getElementById("tarefas-container");
 
@@ -110,9 +110,6 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     
-    tarefas = [
-        { id: 1, nome: "Comprar materiais", custo: 950, data: "2025-08-01", ordem: 1 },
-        { id: 2, nome: "Pagar servidor", custo: 1200, data: "2025-08-05", ordem: 2 },
-    ];
+  
     renderizarTarefas();
 });
