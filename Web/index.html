@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lista de Tarefas</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Lista de Tarefas</h1>
+    <table id="tarefasTable">
+      <thead>
+        <tr>
+          <th>Nome da Tarefa</th>
+          <th>Custo (R$)</th>
+          <th>Data Limite</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="tarefasBody">
+       
+      </tbody>
+    </table>
+    <button id="btnAdicionar">Incluir Nova Tarefa</button>
+  </div>
+
+ 
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="fecharModal" class="fechar">&times;</span>
+      <h2 id="modalTitulo">Adicionar Tarefa</h2>
+      <form id="formTarefa">
+        <input type="hidden" id="tarefaId" />
+        <label>Nome da Tarefa:</label>
+        <input type="text" id="nomeTarefa" required />
+
+        <label>Custo (R$):</label>
+        <input type="number" id="custoTarefa" step="0.01" required />
+
+        <label>Data Limite:</label>
+        <input type="date" id="dataLimite" required />
+
+        <button type="submit" id="salvarTarefa">Salvar</button>
+      </form>
+    </div>
+  </div>
+
+ 
+  <div id="modalConfirmacao" class="modal">
+    <div class="modal-content">
+      <p>Tem certeza que deseja excluir esta tarefa?</p>
+      <button id="confirmarExclusao">Sim</button>
+      <button id="cancelarExclusao">Não</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
